@@ -1,6 +1,7 @@
 .shop-bar {
   @include lateral-margin-20;
   @include flex-space-between;
+  border-bottom: 2px solid $light-gray;
 
   .contact-icons {
     a {
@@ -11,10 +12,14 @@
   .shopping-buttons {
     button {
       height: 50px;
-
       padding: 0 10px;
+      border-left: 1px solid $light-gray;
+      color: $fedora;
+    }
 
-      border-right: 1px solid $edward-muted;
+    .cart-button {
+      padding: 0 60px;
+      color: #000000;
     }
   }
 }
