@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: #2a2f33;
+.bgc-white {
+  background-color: #ffffff;
+}
+
+.shop-bar {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-bar .contact-icons a {
+  padding: 10px;
+  color: #6b6a6b;
+}
+.shop-bar .shopping-buttons button {
+  height: 50px;
+  padding: 0 10px;
+  border-right: 1px solid #a0a5a5;
 }

@@ -1,3 +1,20 @@
-h1 {
-  color: $shark;
+.shop-bar {
+  @include lateral-margin-20;
+  @include flex-space-between;
+
+  .contact-icons {
+    a {
+      @include contact-icon;
+    }
+  }
+
+  .shopping-buttons {
+    button {
+      height: 50px;
+
+      padding: 0 10px;
+
+      border-right: 1px solid $edward-muted;
+    }
+  }
 }
