@@ -9,6 +9,18 @@
   background-color: #ffffff;
 }
 
+.navbar-active {
+  color: #427ed5;
+  border-top: 1px solid #427ed5;
+}
+
+.shop-button {
+  padding: 10px 20px;
+  background-color: #427ed5;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
 .shop-bar {
   margin-left: 20vw;
   margin-right: 20vw;
@@ -30,4 +42,31 @@
 .shop-bar .shopping-buttons .cart-button {
   padding: 0 60px;
   color: #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.navbar .logo-left img {
+  margin: 20px 0;
+}
+.navbar .nav-menu ul {
+  list-style: none;
+}
+.navbar .nav-menu ul li {
+  float: left;
+  padding: 0 10px;
+  color: #6b6a6b;
+}
+.navbar .nav-menu ul li button {
+  position: relative;
+  top: -10px;
+  margin: 0 20px;
+}
+.navbar .nav-menu ul li i {
+  padding-left: 3px;
 }
