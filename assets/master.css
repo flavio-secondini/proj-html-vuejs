@@ -102,6 +102,87 @@
   padding-left: 3px;
 }
 
+.category-display .category-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category-display .category-buttons button {
+  margin: 50px 0;
+  padding: 10px 40px;
+  border: 1px solid #a0a5a5;
+  background-color: #EFEFEF;
+}
+.category-display .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.category-display .card .card-info {
+  position: relative;
+  left: -50px;
+}
+.category-display .card .card-info .item-title {
+  margin: 20px 0 10px 0;
+}
+.category-display .card .card-info .item-description {
+  margin: 10px 0;
+  color: #a0a5a5;
+}
+.category-display .card .card-info .item-old-price {
+  margin: 10px 0;
+  color: #333333;
+  text-decoration: line-through;
+}
+.category-display .card .card-info .item-new-price {
+  margin: 10px 5px;
+  color: #333333;
+  font-size: 24px;
+}
+
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+.season-display .season-jumbo {
+  height: 60vh;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center top;
+  background-size: cover;
+}
+.season-display .season-jumbo .season-jumbo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 100px;
+}
+.season-display .season-jumbo .season-jumbo-text h1 {
+  margin-top: 30px;
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.season-display .season-jumbo .season-jumbo-text h2 {
+  color: #ffffff;
+  margin: 15px 0;
+  font-size: 20px;
+}
+.season-display .season-jumbo .season-jumbo-text button {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+}
+
 .separator-title {
   display: flex;
   justify-content: center;
