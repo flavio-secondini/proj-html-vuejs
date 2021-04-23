@@ -1,0 +1,16 @@
+.separator-title {
+  @include flex-center;
+
+  .hr-title {
+    @include hr-title;
+  }
+
+  h1 {
+    @include separator-h1;
+  }
+
+}
+
+.separator-subtitle {
+  @include separator-subtitle;
+}

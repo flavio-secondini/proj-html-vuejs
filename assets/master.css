@@ -10,15 +10,25 @@
 }
 
 .navbar-active {
-  color: #427ed5;
-  border-top: 1px solid #427ed5;
+  color: #333333;
+  border-top: 1px solid #333333;
 }
 
 .shop-button {
   padding: 10px 20px;
-  background-color: #427ed5;
+  background-color: #333333;
   color: #ffffff;
   border-radius: 20px;
+}
+
+.jumbo-button {
+  margin: 20px 10px;
+  padding: 20px 40px;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .shop-bar {
@@ -42,6 +52,27 @@
 .shop-bar .shopping-buttons .cart-button {
   padding: 0 60px;
   color: #000000;
+}
+
+.jumbo {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center top;
+  background-size: cover;
+}
+.jumbo h1 {
+  margin-top: 50px;
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.jumbo h2 {
+  color: #ffffff;
+  margin: 30px 0;
+  font-size: 30px;
 }
 
 .navbar {
@@ -69,4 +100,26 @@
 }
 .navbar .nav-menu ul li i {
   padding-left: 3px;
+}
+
+.separator-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.separator-title .hr-title {
+  margin: 100px 50px 0 50px;
+  width: 20%;
+  border-top: 3px solid #EFEFEF;
+  border-radius: 50%;
+}
+.separator-title h1 {
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.separator-subtitle {
+  margin: 10px 0 50px 0;
+  color: #a0a5a5;
+  text-align: center;
 }

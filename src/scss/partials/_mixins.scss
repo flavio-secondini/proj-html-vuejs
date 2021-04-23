@@ -21,3 +21,26 @@
   padding: 10px;
   color: $fedora;
 }
+
+// SEPARATOR TITLE
+@mixin hr-title {
+  margin: 100px 50px 0 50px;
+
+  width: 20%;
+
+  border-top: 3px solid $light-gray;
+  border-radius: 50%;
+}
+
+@mixin separator-h1 {
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+@mixin separator-subtitle {
+  margin: 10px 0 50px 0;
+
+  color: $edward-muted;
+
+  text-align: center;
+}
