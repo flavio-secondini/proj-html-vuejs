@@ -145,11 +145,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
+  margin: 100px 0 0 0;
 }
 .season-display .season-jumbo {
   height: 60vh;
-  width: 33%;
+  width: calc(100% / 3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,6 +183,146 @@
   border: 1px solid #ffffff;
 }
 
+.arrow-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.arrow-display .scroll-left, .arrow-display .scroll-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 20px;
+  background-color: #a0a5a5;
+  color: #ffffff;
+}
+
+.promotions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 100px 0 0 0;
+  background-position: center;
+  background-size: cover;
+}
+.promotions-container .promotions-discount, .promotions-container .promotions-shipping {
+  height: 40vh;
+  width: calc(40vw - 100px);
+  margin: 0 25px;
+  background-position: center;
+  background-size: cover;
+}
+.promotions-container .promotions-discount .promotions-text, .promotions-container .promotions-shipping .promotions-text {
+  margin-left: 50px;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+}
+.promotions-container .promotions-discount .promotions-text h1, .promotions-container .promotions-shipping .promotions-text h1 {
+  margin-top: 30px;
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.promotions-container .promotions-discount .promotions-text h2, .promotions-container .promotions-shipping .promotions-text h2 {
+  color: #ffffff;
+  margin: 15px 0;
+  width: 50%;
+}
+.promotions-container .promotions-discount .promotions-text button, .promotions-container .promotions-shipping .promotions-text button {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+}
+
+.arrow-display-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.arrow-display-large .scroll-left, .arrow-display-large .scroll-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 20px;
+  background-color: #a0a5a5;
+  color: #ffffff;
+}
+
+.testimonials-container {
+  height: 50vh;
+  margin: 100px 0 0 0;
+  background-position: center;
+  background-size: cover;
+}
+.testimonials-container .testimonial-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  width: 60%;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  left: 20%;
+}
+.testimonials-container .testimonial-card img {
+  margin: 20px 0;
+}
+.testimonials-container .testimonial-card p {
+  margin: 30px 0;
+  font-size: 20px;
+  font-style: italic;
+}
+.testimonials-container .testimonial-card span {
+  margin: 30px 0;
+  font-size: 20px;
+}
+.testimonials-container .testimonial-card .testimonial-name {
+  font-weight: bold;
+}
+.testimonials-container .testimonial-card i {
+  margin: 30px 5px;
+}
+
+.blog-articles {
+  margin-top: 100px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-articles .article-card-container {
+  width: calc(33% - 50px);
+}
+.blog-articles .article-card-container .article-card h3 {
+  margin: 10px 0 2px 0;
+}
+.blog-articles .article-card-container .article-card span {
+  color: #64686c;
+}
+.blog-articles .article-card-container .article-card p {
+  margin-top: 10px;
+  color: #64686c;
+}
+
+.footer-separator {
+  margin: 100px 0;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  border: 2px solid #EFEFEF;
+  border-radius: 50%;
+}
+
 .separator-title {
   display: flex;
   justify-content: center;
@@ -201,6 +341,6 @@
 
 .separator-subtitle {
   margin: 10px 0 50px 0;
-  color: #a0a5a5;
+  color: #64686c;
   text-align: center;
 }

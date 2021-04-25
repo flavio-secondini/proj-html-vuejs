@@ -49,11 +49,11 @@
 // DISPLAY COLLEZIONI STAGIONALI
 .season-display {
   @include flex-center;
-  margin: 100px 0;
+  margin: 100px 0 0 0;
 
   .season-jumbo {
     height: 60vh;
-    width: 33%;
+    width: calc(100% / 3);
 
     @include flex-center;
     flex-direction: column;
@@ -87,4 +87,156 @@
       }
     }
   }
+}
+
+// DISPLAY CON SCORRIMENTO A FRECCE (PICCOLO)
+.arrow-display {
+  @include flex-center;
+  margin-top: 50px;
+
+  .scroll-left, .scroll-right {
+    @include flex-center;
+    height: 50px;
+    width: 20px;
+    background-color: $edward-muted;
+    color: $white;
+  }
+}
+
+// SEZIONE PROMOZIONI
+.promotions-container {
+  @include flex-center;
+  height: 50vh;
+  margin: 100px 0 0 0;
+  background-position: center;
+  background-size: cover;
+
+  .promotions-discount, .promotions-shipping {
+    height: 40vh;
+    width: calc(40vw - 100px);
+    margin: 0 25px;
+    background-position: center;
+    background-size: cover;
+
+    .promotions-text {
+      margin-left: 50px;
+      flex-direction: column;
+      position: relative;
+      top: 50px;
+
+      h1 {
+        margin-top: 30px;
+        font-size: 60px;
+        color: $white;
+        font-weight: bold;
+      }
+
+      h2 {
+        color: $white;
+        margin: 15px 0;
+        width: 50%;
+      }
+
+      button {
+        margin: 10px 5px;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: 1px solid $white;
+      }
+    }
+  }
+}
+
+// DISPLAY CON SCORRIMENTO A FRECCE (GRANDE)
+.arrow-display-large {
+  @include flex-center;
+  margin-top: 50px;
+
+  .scroll-left, .scroll-right {
+    @include flex-center;
+    height: 50px;
+    width: 20px;
+    background-color: $edward-muted;
+    color: $white;
+  }
+}
+
+// DISPLAY TESTIMONIALS
+.testimonials-container {
+  height: 50vh;
+  margin: 100px 0 0 0;
+  background-position: center;
+  background-size: cover;
+
+  .testimonial-card {
+    @include flex-center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    width: 60%;
+    text-align: center;
+    color: $white;
+    position: relative;
+    left: 20%;
+
+    img {
+      margin: 20px 0;
+    }
+
+    p {
+      margin: 30px 0;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    span {
+      margin: 30px 0;
+      font-size: 20px;
+    }
+
+    .testimonial-name {
+      font-weight: bold;
+    }
+
+    i {
+      margin: 30px 5px;
+    }
+  }
+}
+
+//LINK BLOG
+.blog-articles {
+  margin-top: 100px;
+  @include lateral-margin-20;
+  display: flex;
+  justify-content: space-between;
+
+  .article-card-container {
+    width: calc(33% - 50px);
+
+    .article-card {
+      h3 {
+        margin: 10px 0 2px 0;
+      }
+
+      span {
+        color: $nevada-dark-muted;
+      }
+
+      p {
+        margin-top: 10px;
+        color: $nevada-dark-muted;
+      }
+    }
+  }
+}
+
+// FOOTER SEPARATOR
+.footer-separator {
+  margin: 100px 0;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  border: 2px solid $light-gray;
+  border-radius: 50%;
 }
