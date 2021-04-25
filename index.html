@@ -231,20 +231,34 @@
       </div>
     </section>
 
-    <section>
+    <section id="testimonial">
       <div class="testimonials-container" style="background-image: url('./assets/img/testimonials_home_1_bg.jpg')">
-        <div class="testimonial-card">
+        <div class="testimonial-card" v-if="categoriaAttiva == 1">
           <div class="testimonial-image">
-            <img src="./assets\img\man_testimonial.png" alt="">
+            <img :src="testimonial1.foto" alt="">
           </div>
           <div class="testimonial-text">
-            <p class="testimonial-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <span class="testimonial-name">Dario Pineda,</span>
-            <span>Theme Fusion</span>
+            <p class="testimonial-description">{{testimonial1.descrizione}}</p>
+            <span class="testimonial-name">{{testimonial1.nome}},</span>
+            <span>{{testimonial1.impiego}}</span>
+            <div class="testimonial-dots">
+              <i class="fas fa-circle" @click="elemento1"></i>
+              <i class="far fa-circle" @click="elemento2"></i>
+            </div>
           </div>
-          <div class="testimonial-dots">
-            <i class="fas fa-circle"></i>
-            <i class="far fa-circle"></i>
+        </div>
+        <div class="testimonial-card" v-if="categoriaAttiva == 2">
+          <div class="testimonial-image">
+            <img :src="testimonial2.foto" alt="">
+          </div>
+          <div class="testimonial-text">
+            <p class="testimonial-description">{{testimonial2.descrizione}}</p>
+            <span class="testimonial-name">{{testimonial2.nome}},</span>
+            <span>{{testimonial2.impiego}}</span>
+            <div class="testimonial-dots">
+              <i class="far fa-circle" @click="elemento1"></i>
+              <i class="fas fa-circle" @click="elemento2"></i>
+            </div>
           </div>
         </div>
       </div>

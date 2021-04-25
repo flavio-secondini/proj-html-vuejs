@@ -141,8 +141,40 @@ var app = new Vue ({
       './assets/img/spring_printed_dress-400x520.jpg',
       './assets/img/leather_gloves-400x520.jpg',
       './assets/img/modern_leather_boots-400x520.jpg',
+      './assets/img/modern_black_leather_suit-400x520.jpg',
+      './assets/img/blue_jacket_and_white_stripe_tee-400x520.jpg',
+      './assets/img/spring_printed_dress-400x520.jpg',
     ]
   },
   methods: {
+  }
+})
+
+var app = new Vue ({
+  el:'#testimonial',
+  data: {
+    categoriaAttiva:'1',
+
+    testimonial1: {
+      foto:'./assets/img/man_testimonial.png',
+      descrizione:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      nome:'Dario Pineda',
+      impiego:'Theme Fusion',
+    },
+
+    testimonial2: {
+      foto:'./assets/img/woman_testimonial.png',
+      descrizione:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      nome:'Lucia Pineda',
+      impiego:'Theme Fusion',
+    },
+  },
+  methods: {
+    elemento1: function () {
+      this.categoriaAttiva = '1';
+    },
+    elemento2: function () {
+      this.categoriaAttiva = '2';
+    },
   }
 })
