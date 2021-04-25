@@ -1,0 +1,148 @@
+Vue.config.devtools = true;
+
+var app = new Vue ({
+  el:'#category-display',
+  data: {
+    categoriaAttiva: 'uomo',
+
+    offerteStagionaliUomo: [
+      {
+        immagine: './assets/img/black_elegant_leather_jacket-200x260.jpg',
+        nome: 'Elegant Leather Jacket',
+        descrizione: 'lorem ipsum',
+        vecchioPrezzo: '678$',
+        nuovoPrezzo: '453$',
+      },
+      {
+        immagine: './assets/img/black_leather_suit-200x260.jpg',
+        nome: 'Leather suit',
+        descrizione: 'dolor sit amet',
+        vecchioPrezzo: '789$',
+        nuovoPrezzo: '342$',
+      },
+      {
+        immagine: './assets/img/blue_jacket_and_white_stripe_tee-200x260.jpg',
+        nome: 'Blue jacket',
+        descrizione: 'lorem ipsum dolor',
+        vecchioPrezzo: '',
+        nuovoPrezzo: '345$',
+      },
+      {
+        immagine: './assets/img/modern_black_leather_suit-200x260.jpg',
+        nome: 'Modern black suit',
+        descrizione: 'sit amet lorem',
+        vecchioPrezzo: '547$',
+        nuovoPrezzo: '132$',
+      },
+    ],
+
+    offerteStagionaliDonna: [
+      {
+        immagine: './assets/img/black_leather_jacket-200x260.jpg',
+        nome: 'Leather jacket',
+        descrizione: 'giacca pelle nera',
+        vecchioPrezzo: '',
+        nuovoPrezzo: '659$',
+      },
+      {
+        immagine: './assets/img/spring_printed_dress-200x260.jpg',
+        nome: 'Spring dress',
+        descrizione: 'vestito colore chiaro',
+        vecchioPrezzo: '',
+        nuovoPrezzo: '451$',
+      },
+      {
+        immagine: './assets/img/hipster_black_top-200x260.jpg',
+        nome: 'Black top',
+        descrizione: 'top hipster nero',
+        vecchioPrezzo: '859$',
+        nuovoPrezzo: '534$',
+      },
+      {
+        immagine: './assets/img/modern_love_tee-200x260.jpg',
+        nome: 'Love tee',
+        descrizione: 'indumento moderno',
+        vecchioPrezzo: '954$',
+        nuovoPrezzo: '451$',
+      },
+    ],
+
+    offerteStagionaliAccessori: [
+      {
+        immagine: './assets/img/brown_dress_shoes-200x260.jpg',
+        nome: 'Brown shoes',
+        descrizione: 'scarpe eleganti marroni',
+        vecchioPrezzo: '746$',
+        nuovoPrezzo: '453$',
+      },
+      {
+        immagine: './assets/img/casual_leather_belts-200x260.jpg',
+        nome: 'Leather belt',
+        descrizione: 'cintura da abito casual',
+        vecchioPrezzo: '457$',
+        nuovoPrezzo: '319$',
+      },
+      {
+        immagine: './assets/img/modern_leather_boots-200x260.jpg',
+        nome: 'Brown boots',
+        descrizione: 'stivali marroni moderni',
+        vecchioPrezzo: '',
+        nuovoPrezzo: '348$',
+      },
+      {
+        immagine: './assets/img/leather_gloves-200x260.jpg',
+        nome: 'Leather gloves',
+        descrizione: 'guanti marroni in pelle',
+        vecchioPrezzo: '',
+        nuovoPrezzo: '129$',
+      },
+    ],
+  },
+  mounted () {
+  },
+  methods: {
+    categoriaUomo: function () {
+      this.categoriaAttiva = 'uomo'
+    },
+    categoriaDonna: function () {
+      this.categoriaAttiva = 'donna'
+    },
+    categoriaAccessori: function () {
+      this.categoriaAttiva = 'accessori'
+    },
+  }
+})
+
+var app = new Vue ({
+  el:'#arrow-display-small',
+  data: {
+    galleriaModelliSmall: [
+      './assets/img/black_elegant_leather_jacket-120x156.jpg',
+      './assets/img/black_leather_jacket-120x156.jpg',
+      './assets/img/blue_leather_jacket-120x156.jpg',
+      './assets/img/hipster_black_top-120x156.jpg',
+      './assets/img/spring_printed_dress-120x156.jpg',
+      './assets/img/leather_gloves-120x156.jpg',
+      './assets/img/modern_leather_boots-120x156.jpg',
+    ]
+  },
+  methods: {
+  }
+})
+
+var app = new Vue ({
+  el:'#arrow-display-large',
+  data: {
+    galleriaModelliLarge: [
+      './assets/img/black_elegant_leather_jacket-400x520.jpg',
+      './assets/img/black_leather_jacket-400x520.jpg',
+      './assets/img/blue_leather_jacket-400x520.jpg',
+      './assets/img/hipster_black_top-400x520.jpg',
+      './assets/img/spring_printed_dress-400x520.jpg',
+      './assets/img/leather_gloves-400x520.jpg',
+      './assets/img/modern_leather_boots-400x520.jpg',
+    ]
+  },
+  methods: {
+  }
+})

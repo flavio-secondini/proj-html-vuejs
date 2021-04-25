@@ -12,18 +12,48 @@
     ul {
       list-style: none;
       li {
+        border-top: 3px solid $white;
+        height: 87px;
         float: left;
-        padding: 0 10px;
+        margin: 0 10px;
+        padding-top: 30px;
         color: $fedora;
+
+        &:hover {
+          color: $havelock-blue;
+          border-top: 3px solid $havelock-blue;
+        }
 
         button {
           position: relative;
-          top: -10px;
+          bottom: 10px;
           margin: 0 20px;
         }
 
         i {
           padding-left: 3px;
+        }
+      }
+
+      .navbar-active {
+        color: $havelock-blue;
+        border-top: 3px solid $havelock-blue;
+      }
+    }
+  }
+
+  .navbar {
+    .nav-menu {
+      height: 87px;
+      @include flex-center;
+
+      li {
+
+        @include flex-center;
+
+        button {
+          position: relative;
+          top: 50%;
         }
       }
     }

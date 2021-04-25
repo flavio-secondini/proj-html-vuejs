@@ -12,6 +12,17 @@
 
   <header>
 
+    <section class="fixed-bar">
+      <div class="first-fixed-button">
+        <i class="fas fa-folder-open"></i>
+        <p>Demos</p>
+      </div>
+      <div class="fixed-button">
+        <h1>39$</h1>
+        <p>On Sale</p>
+      </div>
+    </section>
+
     <section>
       <div class="shop-bar">
         <div class="contact-icons">
@@ -35,13 +46,13 @@
         </div>
         <div class="nav-menu">
           <ul>
-            <li>Home <i class="fas fa-angle-down"></i></li>
-            <li>Shop <i class="fas fa-angle-down"></i></li>
-            <li>Products <i class="fas fa-angle-down"></i></li>
-            <li>Categories <i class="fas fa-angle-down"></i></li>
-            <li>News <i class="fas fa-angle-down"></i></li>
-            <li>Elements <i class="fas fa-angle-down"></i></li>
-            <li><button class="shop-button">SHOP NOW!</button></li>
+            <li class="navbar-active"><a href="">Home <i class="fas fa-angle-down"></i></a></li>
+            <li><a href="">Shop <i class="fas fa-angle-down"></i></a></li>
+            <li><a href="">Products <i class="fas fa-angle-down"></i></a></li>
+            <li><a href="">Categories <i class="fas fa-angle-down"></i></a></li>
+            <li><a href="">News <i class="fas fa-angle-down"></i></a></li>
+            <li><a href="">Elements <i class="fas fa-angle-down"></i></a></li>
+            <li><a href=""><button class="shop-button">SHOP NOW!</button></a></li>
             <li><i class="fas fa-search"></i></li>
           </ul>
         </div>
@@ -74,20 +85,42 @@
       </div>
     </section>
 
-    <section class="category-display">
+    <section id="category-display">
       <div class="category-buttons">
-        <button>Men</button>
-        <button>Women</button>
-        <button>Accessories</button>
+        <button @click="categoriaUomo" :class="(categoriaAttiva == 'uomo') ? 'active' : ''">Men</button>
+        <button @click="categoriaDonna" :class="(categoriaAttiva == 'donna') ? 'active' : ''">Women</button>
+        <button @click="categoriaAccessori" :class="(categoriaAttiva == 'accessori') ? 'active' : ''">Accessories</button>
       </div>
-      <div class="category-cards">
-        <div class="card">
-          <img src="./assets\img\black_elegant_leather_jacket-231x300.jpg" alt="">
+      <div class="category-cards men" v-if="categoriaAttiva === 'uomo'">
+        <div class="card" v-for="elemento in offerteStagionaliUomo">
+          <img :src="elemento.immagine" alt="">
           <div class="card-info">
-            <h1 class="item-title">prova</h1>
-            <p class="item-description">prova2</p>
-            <span class="item-old-price">prova3</span>
-            <span class="item-new-price">prova4</span>
+            <h1 class="item-title">{{elemento.nome}}</h1>
+            <p class="item-description">{{elemento.descrizione}}</p>
+            <span class="item-old-price">{{elemento.vecchioPrezzo}}</span>
+            <span class="item-new-price">{{elemento.nuovoPrezzo}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="category-cards women" v-if="categoriaAttiva === 'donna'">
+        <div class="card" v-for="elemento in offerteStagionaliDonna">
+          <img :src="elemento.immagine" alt="">
+          <div class="card-info">
+            <h1 class="item-title">{{elemento.nome}}</h1>
+            <p class="item-description">{{elemento.descrizione}}</p>
+            <span class="item-old-price">{{elemento.vecchioPrezzo}}</span>
+            <span class="item-new-price">{{elemento.nuovoPrezzo}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="category-cards accessories" v-if="categoriaAttiva === 'accessori'">
+        <div class="card" v-for="elemento in offerteStagionaliAccessori">
+          <img :src="elemento.immagine" alt="">
+          <div class="card-info">
+            <h1 class="item-title">{{elemento.nome}}</h1>
+            <p class="item-description">{{elemento.descrizione}}</p>
+            <span class="item-old-price">{{elemento.vecchioPrezzo}}</span>
+            <span class="item-new-price">{{elemento.nuovoPrezzo}}</span>
           </div>
         </div>
       </div>
@@ -136,13 +169,13 @@
       </div>
     </section>
 
-    <section>
+    <section id="arrow-display-small">
       <div class="arrow-display">
         <div class="scroll-left">
           <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="card">
-          <img src="./assets\img\black_elegant_leather_jacket-200x260.jpg" alt="">
+        <div class="card" v-for="immagine in galleriaModelliSmall">
+          <img :src="immagine" alt="">
         </div>
         <div class="scroll-right">
           <i class="fas fa-chevron-right"></i>
@@ -184,13 +217,13 @@
       </div>
     </section>
 
-    <section>
+    <section id="arrow-display-large">
       <div class="arrow-display-large">
         <div class="scroll-left">
           <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="card">
-          <img src="./assets\img\black_elegant_leather_jacket-400x520.jpg" alt="">
+        <div class="card" v-for="immagine in galleriaModelliLarge">
+          <img :src="immagine" alt="">
         </div>
         <div class="scroll-right">
           <i class="fas fa-chevron-right"></i>
@@ -303,6 +336,9 @@
     </section>
 
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./src/vuejs/main.js" charset="utf-8"></script>
 
 </body>
 </html>

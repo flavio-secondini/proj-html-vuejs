@@ -16,6 +16,16 @@
   margin-right: 20vw;
 }
 
+// FIXED BUTTONS
+@mixin fixed-button {
+  height: 70px;
+  width: 70px;
+  background-color: $white;
+  border-radius: 10px;
+  margin: 10px 50px;
+  box-shadow: 5px 10px 18px;
+}
+
 // CONTACT ICONS
 @mixin contact-icon {
   padding: 10px;

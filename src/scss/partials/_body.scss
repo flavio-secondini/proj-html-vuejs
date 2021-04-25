@@ -1,5 +1,5 @@
 // DISPLAY PRODOTTI CON SELEZIONE DI CATEGORIE
-.category-display {
+#category-display {
 
   .category-buttons {
     @include flex-center;
@@ -12,37 +12,48 @@
 
       background-color: $light-gray;
     }
+
+    .active {
+      background-color: $white;
+    }
   }
 
-  .card {
+  .category-cards {
     @include flex-center;
-    flex-direction: column;
 
-    .card-info {
-      position: relative;
-      left: -50px;
+    .card {
+      @include flex-center;
+      flex-direction: column;
+      font-size: 14px;
 
-      .item-title {
-        margin: 20px 0 10px 0;
-      }
+      .card-info {
 
-      .item-description {
-        margin: 10px 0;
-        color: $edward-muted;
-      }
+        .item-title {
+          margin: 20px 0 10px 0;
+        }
 
-      .item-old-price {
-        margin: 10px 0;
-        color: $havelock-blue;
-        text-decoration: line-through;
-      }
+        .item-description {
+          margin: 10px 0;
+          color: $edward-muted;
+        }
 
-      .item-new-price {
-        margin: 10px 5px;
-        color: $havelock-blue;
-        font-size: 24px;
+        .item-old-price {
+          margin: 10px 0;
+          color: $havelock-blue;
+          text-decoration: line-through;
+        }
+
+        .item-new-price {
+          margin: 10px 5px;
+          color: $havelock-blue;
+          font-size: 24px;
+        }
       }
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
