@@ -329,25 +329,81 @@
 
   <footer>
 
-    <section>
+    <section id="best-deals">
       <div class="best-deals-container">
         <div class="best-deals-column">
           <h1>FEATURED</h1>
-          <div class="best-deals-card">
+          <div class="best-deals-card" v-for="card in featured">
             <div class="product-info">
               <div class="product-name">
-                <p></p>
+                <p>{{card.nomeProdotto}}</p>
               </div>
-              <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <div class="stars" v-html="stars(card.rating)">
               </div>
               <div class="product-price">
-                <span class="old-price"></span>
-                <span class="new-price"></span>
+                <span class="old-price">{{card.vecchioPrezzo}}</span>
+                <span class="new-price">{{card.nuovoPrezzo}}</span>
               </div>
             </div>
             <div class="product-image">
-              <img src="" alt="">
+              <img :src="card.immagineProdotto" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="best-deals-column">
+          <h1>ON SALE</h1>
+          <div class="best-deals-card" v-for="card in onSale">
+            <div class="product-info">
+              <div class="product-name">
+                <p>{{card.nomeProdotto}}</p>
+              </div>
+              <div class="stars" v-html="stars(card.rating)">
+              </div>
+              <div class="product-price">
+                <span class="old-price">{{card.vecchioPrezzo}}</span>
+                <span class="new-price">{{card.nuovoPrezzo}}</span>
+              </div>
+            </div>
+            <div class="product-image">
+              <img :src="card.immagineProdotto" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="best-deals-column">
+          <h1>TOP RATED</h1>
+          <div class="best-deals-card" v-for="card in topRated">
+            <div class="product-info">
+              <div class="product-name">
+                <p>{{card.nomeProdotto}}</p>
+              </div>
+              <div class="stars" v-html="stars(card.rating)">
+              </div>
+              <div class="product-price">
+                <span class="old-price">{{card.vecchioPrezzo}}</span>
+                <span class="new-price">{{card.nuovoPrezzo}}</span>
+              </div>
+            </div>
+            <div class="product-image">
+              <img :src="card.immagineProdotto" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="best-deals-column">
+          <h1>LATEST REVIEWS</h1>
+          <div class="best-deals-card" v-for="card in latestReviews">
+            <div class="product-info">
+              <div class="product-name">
+                <p>{{card.nomeProdotto}}</p>
+              </div>
+              <div class="stars" v-html="stars(card.rating)">
+              </div>
+              <div class="product-price">
+                <span class="old-price">{{card.vecchioPrezzo}}</span>
+                <span class="new-price">{{card.nuovoPrezzo}}</span>
+              </div>
+            </div>
+            <div class="product-image">
+              <img :src="card.immagineProdotto" alt="">
             </div>
           </div>
         </div>
@@ -396,11 +452,7 @@
           <span>Powered by Wordpress</span>
         </div>
         <div class="payment-methods">
-          <i class="far fa-credit-card"></i>
-          <i class="fab fa-cc-visa"></i>
-          <i class="fab fa-cc-visa"></i>
-          <i class="fab fa-cc-mastercard"></i>
-          <i class="fab fa-cc-amazon-pay"></i>
+          <img src="./assets/img/payment_cards_footer.png" alt="">
         </div>
       </div>
     </section>

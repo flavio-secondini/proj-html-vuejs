@@ -420,6 +420,62 @@ a {
   text-align: center;
 }
 
+.best-deals-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.best-deals-container .best-deals-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 15vw;
+}
+.best-deals-container .best-deals-column h1 {
+  color: #64686c;
+  font-weight: normal;
+}
+.best-deals-container .best-deals-column .best-deals-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #a0a5a5;
+  margin: 10px 20px;
+  width: 12vw;
+  overflow-x: auto;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-info p {
+  color: #64686c;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-info .stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin-top: 10px 0;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-info .stars i {
+  color: #333333;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-info .product-price .old-price {
+  color: #2a2f33;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-info .product-price .new-price {
+  color: #2a2f33;
+  text-decoration: underline;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-image {
+  margin: 5px;
+}
+.best-deals-container .best-deals-column .best-deals-card .product-image img {
+  height: 80px;
+  width: auto;
+}
+
 .brand-logos {
   display: flex;
   justify-content: center;
@@ -444,11 +500,11 @@ a {
 }
 
 .subscribe-container {
-  height: 15vh;
+  height: 20vh;
   background-color: #303337;
 }
 .subscribe-container .subscribe-elements {
-  height: 15vh;
+  height: 20vh;
   margin-left: 20vw;
   margin-right: 20vw;
   display: flex;
@@ -477,6 +533,7 @@ a {
 }
 .subscribe-container .subscribe-elements .subscribe-info h1 {
   color: #ffffff;
+  font-size: 30px;
 }
 .subscribe-container .subscribe-elements .subscribe-input input {
   padding: 5px;
@@ -496,7 +553,6 @@ a {
 .payment-methods-container .company-info span {
   color: #ffffff;
 }
-.payment-methods-container i {
-  color: #ffffff;
-  padding: 15px;
+.payment-methods-container img {
+  margin: 20px 0;
 }

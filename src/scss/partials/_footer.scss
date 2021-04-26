@@ -1,3 +1,65 @@
+// RIEPILOGO OFFERTE
+.best-deals-container {
+  @include flex-center;
+
+  .best-deals-column {
+    @include flex-center;
+    flex-direction: column;
+    width: 15vw;
+
+    h1 {
+      color: $nevada-dark-muted;
+      font-weight: normal;
+    }
+
+    .best-deals-card {
+      @include flex-center;
+      justify-content: space-between;
+      border-bottom: 1px solid $edward-muted;
+      margin: 10px 20px;
+      width: 12vw;
+      overflow-x: auto;
+
+      .product-info {
+        p {
+          color: $nevada-dark-muted;
+        }
+        .stars {
+          @include flex-center;
+          height: 30px;
+          margin-top: 10px 0;
+
+          i {
+            color: $havelock-blue;
+          }
+        }
+
+        .product-price {
+          .old-price {
+            color: $shark;
+            font-size: 14px;
+            text-decoration: line-through;
+          }
+
+          .new-price {
+            color: $shark;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .product-image {
+        margin: 5px;
+
+        img {
+          height: 80px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
 // BRAND LOGOS
 .brand-logos {
   @include flex-center;
@@ -21,12 +83,13 @@
   }
 }
 
+// NEWSLETTER
 .subscribe-container {
-  height: 15vh;
+  height: 20vh;
   background-color: #303337;
 
   .subscribe-elements {
-    height: 15vh;
+    height: 20vh;
     @include lateral-margin-20;
     @include flex-center;
     justify-content: space-around;
@@ -50,6 +113,7 @@
 
       h1 {
         color: $white;
+        font-size: 30px;
       }
     }
 
@@ -62,6 +126,7 @@
   }
 }
 
+// SEZIONE FINALE FOOTER
 .payment-methods-container {
   background-color: #1d1f22;
   @include flex-center;
@@ -75,8 +140,7 @@
     }
   }
 
-  i {
-    color: $white;
-    padding: 15px;
+  img {
+    margin: 20px 0;
   }
 }

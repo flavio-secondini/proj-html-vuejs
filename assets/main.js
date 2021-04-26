@@ -155,6 +155,102 @@ var app = new Vue({
   }
 });
 var app = new Vue({
+  el: '#best-deals',
+  data: {
+    featured: [{
+      nomeProdotto: 'Lorem',
+      rating: '5',
+      vecchioPrezzo: '584$',
+      nuovoPrezzo: '315$',
+      immagineProdotto: './assets/img/blue_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Ipsum',
+      rating: '4',
+      vecchioPrezzo: '524$',
+      nuovoPrezzo: '115$',
+      immagineProdotto: './assets/img/black_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Dolor',
+      rating: '2',
+      vecchioPrezzo: '884$',
+      nuovoPrezzo: '415$',
+      immagineProdotto: './assets/img/spring_printed_dress-120x156.jpg'
+    }],
+    onSale: [{
+      nomeProdotto: 'Ipsum',
+      rating: '4',
+      vecchioPrezzo: '524$',
+      nuovoPrezzo: '115$',
+      immagineProdotto: './assets/img/black_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Lorem',
+      rating: '5',
+      vecchioPrezzo: '584$',
+      nuovoPrezzo: '315$',
+      immagineProdotto: './assets/img/blue_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Dolor',
+      rating: '2',
+      vecchioPrezzo: '884$',
+      nuovoPrezzo: '415$',
+      immagineProdotto: './assets/img/leather_gloves-120x156.jpg'
+    }],
+    topRated: [{
+      nomeProdotto: 'Ipsum',
+      rating: '4',
+      vecchioPrezzo: '524$',
+      nuovoPrezzo: '115$',
+      immagineProdotto: './assets/img/black_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Dolor',
+      rating: '2',
+      vecchioPrezzo: '884$',
+      nuovoPrezzo: '415$',
+      immagineProdotto: './assets/img/black_elegant_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Lorem',
+      rating: '5',
+      vecchioPrezzo: '584$',
+      nuovoPrezzo: '315$',
+      immagineProdotto: './assets/img/blue_leather_jacket-120x156.jpg'
+    }],
+    latestReviews: [{
+      nomeProdotto: 'Dolor',
+      rating: '2',
+      vecchioPrezzo: '884$',
+      nuovoPrezzo: '415$',
+      immagineProdotto: './assets/img/spring_printed_dress-120x156.jpg'
+    }, {
+      nomeProdotto: 'Lorem',
+      rating: '5',
+      vecchioPrezzo: '584$',
+      nuovoPrezzo: '315$',
+      immagineProdotto: './assets/img/blue_leather_jacket-120x156.jpg'
+    }, {
+      nomeProdotto: 'Ipsum',
+      rating: '4',
+      vecchioPrezzo: '524$',
+      nuovoPrezzo: '115$',
+      immagineProdotto: './assets/img/modern_leather_boots-120x156.jpg'
+    }]
+  },
+  methods: {
+    stars: function stars(rating) {
+      var starsHTML = '';
+
+      for (var i = 1; i <= 5; i++) {
+        if (i <= rating) {
+          starsHTML += '<i class="fas fa-star"></i>';
+        } else {
+          starsHTML += '<i class="far fa-star"></i>';
+        }
+      }
+
+      return starsHTML;
+    }
+  }
+});
+var app = new Vue({
   el: '#mail-subscribe',
   data: {
     indirizzoCliente: ''
