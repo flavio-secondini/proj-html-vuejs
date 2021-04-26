@@ -5,6 +5,21 @@ var app = new Vue ({
   data: {
     categoriaAttiva: 'uomo',
 
+    listaElementi: [
+      {
+        categoria: 'Uomo',
+        valore: 'uomo',
+      },
+      {
+        categoria: 'Donna',
+        valore: 'donna',
+      },
+      {
+        categoria: 'Accessori',
+        valore: 'accessori',
+      },
+    ],
+
     offerteStagionaliUomo: [
       {
         immagine: './assets/img/black_elegant_leather_jacket-200x260.jpg',
@@ -101,15 +116,18 @@ var app = new Vue ({
   mounted () {
   },
   methods: {
-    categoriaUomo: function () {
-      this.categoriaAttiva = 'uomo'
-    },
-    categoriaDonna: function () {
-      this.categoriaAttiva = 'donna'
-    },
-    categoriaAccessori: function () {
-      this.categoriaAttiva = 'accessori'
-    },
+    // categoriaUomo: function () {
+    //   this.categoriaAttiva = 'uomo'
+    // },
+    // categoriaDonna: function () {
+    //   this.categoriaAttiva = 'donna'
+    // },
+    // categoriaAccessori: function () {
+    //   this.categoriaAttiva = 'accessori'
+    // },
+    cambioCategoria: function (index) {
+      this.categoriaAttiva = this.listaElementi[index].valore;
+    }
   }
 })
 
@@ -157,7 +175,7 @@ var app = new Vue ({
 
     testimonial1: {
       foto:'./assets/img/man_testimonial.png',
-      descrizione:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      descrizione:'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       nome:'Dario Pineda',
       impiego:'Theme Fusion',
     },
@@ -166,7 +184,7 @@ var app = new Vue ({
       foto:'./assets/img/woman_testimonial.png',
       descrizione:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       nome:'Lucia Pineda',
-      impiego:'Theme Fusion',
+      impiego:'Writer',
     },
   },
   methods: {

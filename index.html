@@ -87,9 +87,10 @@
 
     <section id="category-display">
       <div class="category-buttons">
-        <button @click="categoriaUomo" :class="(categoriaAttiva == 'uomo') ? 'active' : ''">Men</button>
+        <button v-for="(bottone, index) in listaElementi" @click="cambioCategoria(index)" :class="(categoriaAttiva == bottone.valore) ? 'active' : ''">{{bottone.categoria}}</button>
+        <!-- <button @click="categoriaUomo" :class="(categoriaAttiva == 'uomo') ? 'active' : ''">Men</button>
         <button @click="categoriaDonna" :class="(categoriaAttiva == 'donna') ? 'active' : ''">Women</button>
-        <button @click="categoriaAccessori" :class="(categoriaAttiva == 'accessori') ? 'active' : ''">Accessories</button>
+        <button @click="categoriaAccessori" :class="(categoriaAttiva == 'accessori') ? 'active' : ''">Accessories</button> -->
       </div>
       <div class="category-cards men" v-if="categoriaAttiva === 'uomo'">
         <div class="card" v-for="elemento in offerteStagionaliUomo">
@@ -174,8 +175,10 @@
         <div class="scroll-left">
           <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="card" v-for="immagine in galleriaModelliSmall">
-          <img :src="immagine" alt="">
+        <div class="card" v-for="(immagine, index) in galleriaModelliSmall">
+          <div class="card-image" v-if="index <= 4">
+            <img :src="immagine" alt="">
+          </div>
         </div>
         <div class="scroll-right">
           <i class="fas fa-chevron-right"></i>
@@ -222,8 +225,10 @@
         <div class="scroll-left">
           <i class="fas fa-chevron-left"></i>
         </div>
-        <div class="card" v-for="immagine in galleriaModelliLarge">
-          <img :src="immagine" alt="">
+        <div class="card" v-for="(immagine, index) in galleriaModelliLarge">
+          <div class="card-image" v-if="index <= 3">
+            <img :src="immagine" alt="">
+          </div>
         </div>
         <div class="scroll-right">
           <i class="fas fa-chevron-right"></i>
