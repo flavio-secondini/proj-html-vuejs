@@ -154,6 +154,16 @@ var app = new Vue({
     }
   }
 });
+var app = new Vue({
+  el: '#mail-subscribe',
+  data: {
+    indirizzoCliente: ''
+  },
+  methods: {
+    sendAdress: function sendAdress() {// funzione per comunicare al server l'indirizzo mail ottenuto
+    }
+  }
+});
 
 /***/ }),
 

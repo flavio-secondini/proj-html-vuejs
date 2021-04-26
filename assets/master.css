@@ -419,3 +419,84 @@ a {
   color: #64686c;
   text-align: center;
 }
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EFEFEF;
+  margin-top: 50px;
+}
+.brand-logos h4 {
+  color: #64686c;
+  margin-top: 50px;
+  font-weight: normal;
+}
+.brand-logos .logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.brand-logos .logos-container img {
+  margin: 10px;
+}
+
+.subscribe-container {
+  height: 15vh;
+  background-color: #303337;
+}
+.subscribe-container .subscribe-elements {
+  height: 15vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.subscribe-container .subscribe-elements .subscribe-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.subscribe-container .subscribe-elements .subscribe-info .icon-container {
+  height: 50px;
+  width: 50px;
+  background-color: #2a2f33;
+  border-radius: 50%;
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-container .subscribe-elements .subscribe-info .icon-container i {
+  color: #6b6a6b;
+}
+.subscribe-container .subscribe-elements .subscribe-info h1 {
+  color: #ffffff;
+}
+.subscribe-container .subscribe-elements .subscribe-input input {
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.payment-methods-container {
+  background-color: #1d1f22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.payment-methods-container .company-info {
+  margin-top: 20px;
+}
+.payment-methods-container .company-info span {
+  color: #ffffff;
+}
+.payment-methods-container i {
+  color: #ffffff;
+  padding: 15px;
+}

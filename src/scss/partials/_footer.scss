@@ -1,0 +1,82 @@
+// BRAND LOGOS
+.brand-logos {
+  @include flex-center;
+  flex-direction: column;
+  background-color: $light-gray;
+  margin-top: 50px;
+
+  h4 {
+    color: $nevada-dark-muted;
+    margin-top: 50px;
+    font-weight: normal;
+  }
+
+  .logos-container {
+    @include flex-center;
+    margin-bottom: 30px;
+
+    img {
+      margin: 10px;
+    }
+  }
+}
+
+.subscribe-container {
+  height: 15vh;
+  background-color: #303337;
+
+  .subscribe-elements {
+    height: 15vh;
+    @include lateral-margin-20;
+    @include flex-center;
+    justify-content: space-around;
+
+    .subscribe-info {
+      @include flex-center;
+      justify-content: space-around;
+
+      .icon-container {
+        height: 50px;
+        width: 50px;
+        background-color: $shark;
+        border-radius: 50%;
+        margin-right: 40px;
+        @include flex-center;
+
+        i {
+          color: $fedora;
+        }
+      }
+
+      h1 {
+        color: $white;
+      }
+    }
+
+    .subscribe-input {
+      input {
+        padding: 5px;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.payment-methods-container {
+  background-color: #1d1f22;
+  @include flex-center;
+  flex-direction: column;
+
+  .company-info {
+    margin-top: 20px;
+
+    span {
+      color: $white;
+    }
+  }
+
+  i {
+    color: $white;
+    padding: 15px;
+  }
+}
